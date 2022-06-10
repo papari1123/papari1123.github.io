@@ -2,7 +2,7 @@
 layout: single
 title: C++ 문법(3) 변수 scope와 네임스페이스
 tags: [c++, namespace, scope]
-categories: c++
+categories: C++
 work: 0
 ---
 # Introduction

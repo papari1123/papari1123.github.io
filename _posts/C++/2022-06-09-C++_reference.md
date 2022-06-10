@@ -2,7 +2,7 @@
 layout: single
 title: C++ 문법(1) 참조자
 tags: [c++, reference, 참조자]
-categories: c++
+categories: C++
 work: 0
 ---
 # Introduction
