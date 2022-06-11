@@ -32,8 +32,8 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "open-mmlab" %}
-                        <li><a href="/categories/open-mmlab" class="">Open-mmlab({{category[1].size}})</a></li>
+                    {% if category[0] == "vision" %}
+                        <li><a href="/categories/vision" class="">Vision({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
