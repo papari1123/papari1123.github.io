@@ -45,7 +45,6 @@ behavior recognition, Livestock, EffecientNet, BiFPN, LSTM
   유사 도메인에서 attension 모듈을 사용한 예시를 확인할 필요가 있다.
 
 
-
 ## methods
 ### data description (input, output)    
 1009x 90sec(average)의 video clips으로 구성되며, fps는 25임.

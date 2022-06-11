@@ -7,7 +7,7 @@ work: 0
 ---
 # Introduction
 
-![](.2022-06-06-git_images/49694e09.png)
+![](assets/49694e09.png)
 
 # Discussion
 
