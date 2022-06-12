@@ -75,14 +75,6 @@
                 {% endfor %}
             </ul>
 
-        <span class="nav__sub-title">Linux</span>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "linux" %}
-                        <li><a href="/categories/linux" class="">Linux({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
 
         <span class="nav__sub-title">Python</span>
             <ul>
@@ -107,6 +99,23 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "fluent_python" %}
+                        <li><a href="/categories/fluent_python" class="">Fluent python({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        <span class="nav__sub-title">Linux</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "linux" %}
+                        <li><a href="/categories/linux" class="">Linux({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+
         <span class="nav__sub-title">C++</span>
             <ul>
                 {% for category in site.categories %}
