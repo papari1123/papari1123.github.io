@@ -13,7 +13,12 @@ work: 1
 도커는 client-server 구조를 사용한다. 
 도커 클라이언트와 데몬은 동일한 시스템을 돌리거나 도커 클라이언트를 원격 docker daemon에 연결할 수 있다.
 도커 클라이언트와 데몬은 REST API나 UNIX socket 또는 network interface 등을 이용해 통신할 수 있다.
-또 다른 도커 클라이언트는 Docker compose로 컨테이너들을 포함한 어플리케이션들을 돌릴 수 있다.
+또 다른 도커 클라이언트는 Docker compose로 컨테이너들을 포함한 어플리케이션들을 돌릴 수 있다.  
+
+
+
+![](./../../../assets/images/(TODO)2022-06-01-docker_tutorial_images/1655105073538.png)
+
 
 ## Docker daemon
 도커 데몬은 
@@ -69,3 +74,4 @@ docker run -d -p 80:80 docker/getting-started
 
 # Reference 
 [도커 공식 문서](https://docs.docker.com/get-started/overview/)  
+[안내서](https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html
