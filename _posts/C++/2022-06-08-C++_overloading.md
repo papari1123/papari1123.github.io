@@ -1,6 +1,6 @@
 ---
 layout: single
-title: C++ 문법(2) 오버로딩
+title: C++ 문법(3) 오버로딩
 tags: [c++, 오버로딩, overloading]
 categories: C++
 work: 0

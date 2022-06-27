@@ -1,6 +1,6 @@
 ---
 layout: single
-title: C++ 문법(1) 참조자
+title: C++ 문법(2) 참조자
 tags: [c++, reference, 참조자]
 categories: C++
 work: 0
