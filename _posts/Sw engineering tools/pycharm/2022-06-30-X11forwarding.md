@@ -2,7 +2,7 @@
 layout: single
 title: GUI를 이용해 원격작업을 하기 위한 X forwarding
 tags: [pycharm, X-forwarding, Putty]
-categories: python_lib
+categories: pycharm
 ---
 # Introduction
 리눅스 서버를 다룰 경우 보통 CLI 환경에서 작업을 많이 한다.
