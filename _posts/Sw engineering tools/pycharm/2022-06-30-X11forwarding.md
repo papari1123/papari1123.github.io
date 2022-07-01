@@ -54,6 +54,9 @@ https://www.putty.org/
 
 3. 터미널에서 GUI 지원이 필요한 프로그램을 실행한다. **XLaunch와 Putty가 모두 실행된 상태여야 한다.**
 
++. 만약 Run/Debug로 실행할 경우
+![](./../../../assets/images/2022-06-30-X11forwarding_images/1656564662337.png)
+
 그런데 이 방법은 Putty를 사용해야 해서 상당히 번거롭다.
 Putty를 사용하지 않고 바로 할 수 있는 방법이 있을텐데, 찾게 되면 업로드를 할 예정이다.
 
@@ -64,5 +67,6 @@ Putty를 사용하지 않고 바로 할 수 있는 방법이 있을텐데, 찾�
 ![](./../../../assets/images/X11forwarding_images/1656553201286.png)
 
 # Reference 
+[깃허브블로그](https://vincentycyao.github.io/Vincent-DeepLearning-Blog/server/2020/09/02/PyCharm-Xforwarding.html)
 [참고링크-네이버블로그](https://m.blog.naver.com/sunchan683/221465317759)    
 [참고링크](http://yochin47.blogspot.com/2018/02/ubuntu-client-pc-pycharm-community.html)
