@@ -52,7 +52,6 @@ export
 profile에 있는 명령어는 사용이 가능하다.
 
 ## @ 참고
-chrome-extension://hmigninkgibhdckiaphhmbgcghochdjc/pdfjs/web/viewer.html?file=https%3A%2F%2Fcs.kangwon.ac.kr%2F~leeck%2FIR%2Fbash.pdf
 [환경변수](https://blog.naver.com/PostView.nhn?isHttpsRedirect=true&blogId=koromoon&logNo=220793570727)
 [zetawiki](https://zetawiki.com/wiki/Bash_%EC%89%98%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8_%EC%83%81%EB%8C%80%EA%B2%BD%EB%A1%9C_%EC%96%BB%EA%B8%B0)   
 [Shell script tutorial](https://www.shellscript.sh/quickref.html)   
