@@ -1,6 +1,6 @@
 ---
 layout: single
-title: C++ 문법(3) 변수 scope와 네임스페이스
+title: C++ 문법(4) 변수 scope와 네임스페이스
 tags: [c++, namespace, scope]
 categories: C++
 work: 0
