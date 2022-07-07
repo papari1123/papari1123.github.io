@@ -7,7 +7,7 @@ work: 0
 ---
 # Introduction
 ## 왜 이 개념을 제대로 알아야 하는가?
-- Receptive field는 컴퓨터 비전 딥러닝 분야에서 매우 중요한 개 념이다.
+- Receptive field는 컴퓨터 비전 딥러닝 분야에서 매우 중요한 개념이다.
 - 
 
 ## 관련된 사전 지식
@@ -23,6 +23,13 @@ work: 0
 
 # 개념의 응용
 ## 관련된 논문 / 모델
+
+## Effective Receptive Field
+아래 논문을 참고하였다.
+[Understanding the Effective Receptive Field in Deep Convolutional Neural Networks](https://proceedings.neurips.cc/paper/2016/file/c8067ad1937f728f51288b3eb986afaa-Paper.pdf)
+
+![](./../../../assets/images/(TODO)2022-07-01-receptive_field_images/1657201586705.png)
+
 ## 모델 튜닝을 위한 Receptive field의 이해
 
 
