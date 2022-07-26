@@ -66,6 +66,13 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "pyqt" %}
+                        <li><a href="/categories/pyqt" class="">PyQT({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
 
             <ul>
                 {% for category in site.categories %}
@@ -74,6 +81,7 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+
 
 
         <span class="nav__sub-title">Python</span>
