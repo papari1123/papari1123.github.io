@@ -76,7 +76,17 @@ parts를 사용한다.
 Path.home().joinpath('python', 'scripts', 'test.py')
 ```
 
-9. 기타 프로퍼티
+9. 파일 삭제
+filePath.unlink를 사용한다.
+```python
+filePath=Path("test_dir/main.py")
+
+try:
+    filePath.unlink()
+except OSError as e:
+    print(f"Error:{ e.strerror}")
+```
+10. 기타 프로퍼티
 parents : 경로의 조상 들에 대한 접근을 제공하는 시퀀스. parent라고 하면 바로 윗단계 부모를 의미한다. 
 ```python
 >>> p = PureWindowsPath('c:/foo/bar/setup.py')
