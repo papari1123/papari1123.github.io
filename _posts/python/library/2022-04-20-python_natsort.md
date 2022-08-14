@@ -6,11 +6,11 @@ categories: python_lib
 ---
 
 # 모듈 임포트
-모듈 내 natsorted 함수를 주로 사용한다.
+일반적으로는 모듈 내 natsorted 함수를 주로 사용한다.    
+다만 real sort 등 특별한 기준으로 정렬해야 할 경우 다른 함수들을 임포트 해줘야 한다. (포스트 하단 참조)
 
 
-```python
-from natsort import natsorted
+```python natsorted
 ```
 
 # 모둘 사용해 정렬
