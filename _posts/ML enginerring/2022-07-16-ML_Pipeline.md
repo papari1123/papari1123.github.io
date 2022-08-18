@@ -83,5 +83,12 @@ RUN yum -y install git
 
 https://chaelinyeo.github.io/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EC%8A%A4%EC%BF%A8/AWS%EB%A5%BC%EC%9D%B4%EC%9A%A9%ED%95%9C%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%EB%AA%A8%EB%8D%B8%EB%B0%B0%ED%8F%AC/
 
+
+# Lambda로 pytorch
+sam build && sam deploy –-guided --stack-name kobert --image-repository 002134135717.dkr.ecr.us-east-1.amazonaws.com/kobert  --capabilities CAPABILITY_IAM
+
+https://aws.amazon.com/ko/blogs/machine-learning/using-container-images-to-run-pytorch-models-in-aws-lambda/
+
+
 # Reference
 머신러닝 엔지니어 실무 강의, Chris Song 저
