@@ -8,7 +8,37 @@
             📄 total {{sum}} post
       </li>
       <li>
-        <span class="nav__sub-title">ML/DL</span>
+         <span class="nav__sub-title">Project</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "particulate_patter_prediction" %}
+                        <li><a href="/categories/particulate_patter_prediction" class="">PM prediction({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        <span class="nav__sub-title">ML/DL Research</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "dataset" %}
+                        <li><a href="/categories/dataset" class="">Dataset({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "paper" %}
+                        <li><a href="/categories/paper" class="">Paper Review({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "vision" %}
+                        <li><a href="/categories/vision" class="">Vision({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        <span class="nav__sub-title">ML/DL Engineering</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "pytorch" %}
@@ -25,18 +55,12 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "paper" %}
-                        <li><a href="/categories/paper" class="">Paper({{category[1].size}})</a></li>
+                    {% if category[0] == "aws" %}
+                        <li><a href="/categories/paper" class="">AWS({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "vision" %}
-                        <li><a href="/categories/vision" class="">Vision({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
+
         <span class="nav__sub-title">SW engineering tools</span>
             <ul>
                 {% for category in site.categories %}

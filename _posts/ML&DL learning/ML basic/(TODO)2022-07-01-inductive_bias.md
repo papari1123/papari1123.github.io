@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 개념 톺아보기1 Vision - Receptive field
+title: 개념 톺아보기(1) Vision - Receptive field
 tags: [톺아보기, vision, Receptive field]
 categories: vision
 work: 0
