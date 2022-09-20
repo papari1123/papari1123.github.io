@@ -19,6 +19,13 @@
         <span class="nav__sub-title">ML/DL Research</span>
             <ul>
                 {% for category in site.categories %}
+                    {% if category[0] == "ml_basic" %}
+                        <li><a href="/categories/ml_basic" class="">Basic({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
                     {% if category[0] == "dataset" %}
                         <li><a href="/categories/dataset" class="">Dataset({{category[1].size}})</a></li>
                     {% endif %}

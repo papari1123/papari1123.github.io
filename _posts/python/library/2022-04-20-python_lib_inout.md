@@ -2,7 +2,7 @@
 layout: single
 title: 파일 입출력을 위한 파이썬 함수 (open, close, write, read..)
 tags: [python library, open, close, write, read, seek]
-categories: python
+categories: python_lib
 ---
 
 파이썬에서 파일 입출력을 위해, 파일을 여는 open과 close 내장함수를 포함한 여러 함수가 지원된다.   
