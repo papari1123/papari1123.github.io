@@ -21,7 +21,7 @@ n = 300
 300이란 객체가 있고, 이를 n이란 변수(심볼릭 네임)에 할당했다. n이란 변수는 300이란 상수의 포인터라고 할 수 있고
 다음과 같이 이미지로 표현할 수 있다.   
 
-![](./../../../assets/images/2022-09-19-Python_variable_images/1663567657385.png)
+![](../../../assets/images/2022-09-19-Python_variable_images/1663567657385.png)
 
 이제 m = n 이란 할당문을 써보자.
 ```python
@@ -30,13 +30,13 @@ m = n
     
 m에 n이 참조하는 객체를 동일하게 참조한다. **새로운 객체를 만든 것이 아니다.**
 
-![](./../../../assets/images/2022-09-19-Python_variable_images/1663567722277.png)
+![](../../../assets/images/2022-09-19-Python_variable_images/1663567722277.png)
 
 여기서 m을 400으로 바꿔보자. 그럼 n도 바뀔까?
 ```python
 m = 400
 ```
-![](./../../../assets/images/2022-09-19-Python_variable_images/1663567845089.png)
+![](../../../assets/images/2022-09-19-Python_variable_images/1663567845089.png)
 n은 바뀌지 않는다. 단지 m이 참조하는 객체가 400으로 바뀌었을 뿐이다.
 이는 숫자 상수가 아닌 문장이어도 동일하다.
 ```python
@@ -44,7 +44,7 @@ n = "foo"
 ```
 이 때 객체 300을 참조하는 변수가 없어졌기 때문에, 300이란 객체는 실제로 존재하지 않게 된다.
 
-![](./../../../assets/images/2022-09-19-Python_variable_images/1663567933505.png)
+![](../../../assets/images/2022-09-19-Python_variable_images/1663567933505.png)
 즉, 객체를 참조하는 변수가 없을 경우 해당 객체의 lifetime이 끝난다. 
 
 ## Garbage collection과 Reference Counting
@@ -56,7 +56,6 @@ Python은 reference한 변수가 없을 때 자동으로 gc를 수행한다.
 
 # Discussion
 ## 요약
-- 파이싼 
 - 변수는 일종의 심볼릭 네임으로 객체(데이터)를 참조한다.
 - reference counting에 의해 변수의 lifetime이 정해진다.
 - 이에 따라 gb도 자동으로 이뤄진다.
