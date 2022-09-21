@@ -88,11 +88,9 @@ chain-rule을 이용해 최종 출력층부터 입력층까지 역순으로 계�
 미분된 결과를 저장해야 하기 때문에 **역전파는 순전파보다 더 많은 메모리를 차지한다.**
 ![](./../../../assets/images/2022-09-19-Learning_basic_images/1663733555234.png)
 
-# Discussion
-
-
 
 # Reference
 - 네이버 AI 부트캠프 (* 강의 자료 바탕으로 재구성)            
 - [그래프 이미지](http://taewan.kim/post/tanh_diff/)
-- [ReLU 위키백과](https://en.wikipedia.org/wiki/Rectifier_(neural_networks))
+- [ReLU 위키백과](https://en.wikipedia.org/wiki/Rectifier_(neural_networks))    
+- [Universal Approximation Theorem](https://hanlue.tistory.com/12)
