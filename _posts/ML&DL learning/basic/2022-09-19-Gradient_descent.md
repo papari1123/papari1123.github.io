@@ -123,8 +123,7 @@ for t in range(N):
 
 또한 모든 데이터를 한 번에 메모리에 올리지 않아 out of memory 문제에서도 좀 더 자유롭다.
 
-관련된 강의를 참고한다.     
-https://www.youtube.com/watch?v=UmathvAKj80&ab_channel=VisuallyExplained
+관련된 강의를 참고한다. [link](https://www.youtube.com/watch?v=UmathvAKj80&ab_channel=VisuallyExplained)
  
 # Discussion
 - 경사하강법을 지금은 거의 사용하지는 않지만, 다른 optimizer가 경사하강법을 기반으로
