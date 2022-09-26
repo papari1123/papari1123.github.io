@@ -15,6 +15,7 @@ categories: python
 파이썬 변수는 일종의 심볼릭 네임이다. **이는 객체에 대한 포인터 또는 참조를 의미한다.**     
 객체가 변수에 할당이 된다면, 그 객체의 이름을 불러 참조할 수 있다.
 예를 들면 다음과 같은 상수를 할당한다고 해보자.
+
 ```python
 n = 300
 ```
@@ -48,7 +49,7 @@ n = "foo"
 즉, 객체를 참조하는 변수가 없을 경우 해당 객체의 lifetime이 끝난다. 
 
 ## Garbage collection과 Reference Counting
- 이 때 동적으로 할당했던 메모리 영역에서 필요가 없어진(lifetime이 끝난) 데이터 영역을 해제하는 것을 garbage collection (gc)이라고 하며,
+ 동적으로 할당했던 메모리 영역에서 필요가 없어진(lifetime이 끝난) 데이터 영역을 해제하는 것을 garbage collection (gc)이라고 한다.    
 Python은 reference한 변수가 없을 때 자동으로 gc를 수행한다.
 이러한 방식을 **Reference counting**이라고 한다.
 

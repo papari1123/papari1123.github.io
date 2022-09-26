@@ -4,7 +4,9 @@ title: pytorch(1) basic process
 tags: [pytorch]
 categories: pytorch
 ---
+# Introduction
 
+# 전체 과정 요약
 요약하면 다음과 같다.   
 1. 학습을 위한 필요 모듈 임포트
 2. 데이터 전처리 (이미 전처리된 torchvision.datasets 등을 이용할 수 있음)
@@ -174,7 +176,8 @@ for t in range(epochs):
     test(test_dataloader, model, loss_fn)
 print("Done!")
 ```
-  
-## @ 참고
 
-https://tutorials.pytorch.kr/beginner/basics/quickstart_tutorial.html
+
+# Reference
+- 네이버 AI 부트캠프 (* 강의 자료 바탕으로 재구성)            
+- [파이토치 튜토리얼](https://tutorials.pytorch.kr/beginner/basics/quickstart_tutorial.html)
