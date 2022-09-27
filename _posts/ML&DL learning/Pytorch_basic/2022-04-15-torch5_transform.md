@@ -1,6 +1,6 @@
 ---
 layout: single
-title: pytorch(4) Transform
+title: pytorch(5) Transform
 tags: [pytorch, transform]
 categories: pytorch
 ---

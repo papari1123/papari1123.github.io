@@ -9,7 +9,7 @@ categories: pytorch
 내용은 파이토치 튜토리얼과 네이버 ai 부스트캠프를 참고하였다.
 
 # Pre-question
-- autoGrad가 무엇이고 어떻게 동작하는가?
+- 파이토치에서 view, reshape, squeeze, unsqueeze는 어떤 용도로 쓰일까?
 
 ## 텐서
 Pytorch에서는 텐서를 사용해서 모델의 입력과 출력 및 매개변수들을 encoding한다.  
@@ -24,21 +24,20 @@ import numpy as np
 
   
 ## 텐서 초기화
-
-
-1. 데이터로 부터 직접 생성
+- 데이터로 부터 직접 생성   
 ```python
 data = [[1,2],[3,4]]
 x_data = torch.tensor(data)
 ```
    
-2. Numpy 배열로 생성   
+- Numpy 배열로 생성       
 from_numpy를 이용한다.
 ```python
 np_array = np.array(data)
 x_np = torch.from_numpy(np_array)
 ```
-다른 예시인데, 아래와 같이 numpy를 정의하는 것과 tensor를 정의하는 것을 같이 확인해보자.
+다른 예시인데, 아래와 같이 numpy를 정의하는 것과 tensor를 정의하는 것을 같이 확인해보자.   
+
 ```python
 # numpy 정의
 import numpy as np
@@ -101,6 +100,7 @@ print(f"First row:{tensor[0]}, First col:{tensor[:,0], Last col:{tensor[...,-1]}
 # cat 함수 : 차원수는 그대로 하되, 특정 차원(dim)의 요소를 concat
 # 아래의 결과로는 (4,12)의 shape를 가진 텐서가 나옴.
 print(torch.cat([tensor, tensor, tensor], dim=1))
+
 # stack은 dim으로 설정한 차원을 추가한다.
 # 아래의 결과로는 (4,4,3). dim=1이면 (4,3,4)
 print(torch.stack([tensor, tensor, tensor], dim=1))

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: pytorch(5) model
+title: pytorch(6) model
 tags: [pytorch, nn.Module]
 categories: pytorch
 ---

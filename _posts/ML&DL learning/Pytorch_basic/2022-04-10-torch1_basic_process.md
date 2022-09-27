@@ -5,6 +5,7 @@ tags: [pytorch]
 categories: pytorch
 ---
 # Introduction
+파이토치에서 DL을 구현하기 위한 전과정을 가볍게 확인해보자.
 
 # 전체 과정 요약
 요약하면 다음과 같다.   

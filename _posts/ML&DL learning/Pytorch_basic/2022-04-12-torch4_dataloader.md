@@ -1,6 +1,6 @@
 ---
 layout: single
-title: pytorch(3) Dataloader, Dataset
+title: pytorch(4) Dataloader, Dataset
 tags: [pytorch, dataloader, dataset]
 categories: pytorch
 ---
