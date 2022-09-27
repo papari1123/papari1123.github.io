@@ -1,14 +1,13 @@
 ---
 layout: single
-title: pytorch(3) autograd와 optimizer
+title: pytorch(3) 모델의 autograd 방법
 tags: [pytorch, autograd, optimizer]
 categories: pytorch
 ---
 # Introduction
 DL 모델은 수많은 레이어가 마치 레고블럭처럼 조립되는 것과 같다. 조립을 위해서는 레이어의 특성과 효율적인 조립 방법을 알아야 한다.    
 또한 성능면이나 속도 면에서든 효율적인 추론을 위해 자동 미분의 핵심이 되는 optimizer를 어떻게 구성할 것인지 알아야한다.    
- optimizer를 어떻게 조립해 구성할지, 어떤 프로세스로 자동 미분이 일어날지도 같이 알아보자.
-
+ optimizer를 어떻게 조립해 구성할지, 어떤 프로세스로 자동 미분이 일어날지 알기 위해 레이어에서 일어나는 일을 알아보자.
 # Pre-question
 - 1 epoch에서 이뤄지는 모델 학습 과정을 정리해보자.
 - 모델 추론 성능 및 추론 속도를 올리기 위해서 어떤 부분을 먼저 고려하면 좋을지 같이 논의해보자.
@@ -31,8 +30,8 @@ DL 모델은 수많은 레이어가 마치 레고블럭처럼 조립되는 것�
 
 ## nn.Parameter
 - Tensor 객체의 상속 객체이다.
-- nn.Module 내에 attribute가 될 때는 required_grad = True로 해줘야 한다. 그래야 학습의 대상이 되기 때문이다. 따라서 nn.Parameter에서는 기본적으로 required_grad를 True로 둔다. 
-- 다만 우리가 직접 이 파라미터를 조정할 필요는 없다. 이미 linear, convolutional layer에서 어떤 파라미터를 써야하는지 기본적으로 구성되어 있기 때문이다.
+- nn.Parameter가 nn.Module 내에 attribute가 되는 경우는 보통 학습을 해야하는 파라미터로 설정하는 경우이다. 따라서 nn.Parameter에서는 required_grad의 기본값을 True로 둔다. 
+- 다만 보통은 우리가 직접 이 nn.Parameter를 사용하지는 않는다. 이미 linear, convolutional layer에서 어떤 파라미터를 써야하는지 기본적으로 구성되어 있기 때문이다.
 ![](./../../../assets/images/2022-04-10-torch3_autograd_optimizer_images/1664247335660.png)
 
 
@@ -40,8 +39,9 @@ DL 모델은 수많은 레이어가 마치 레고블럭처럼 조립되는 것�
 - Layer에 있는 Parameter들의 미분을 수행한다.
 - Forward의 결과값인 model의 output과 실제값간의 차이(loss)에 대해 미분을 수행한다. 그래서 Forward의 output은 꼭 넣어주어야 한다.
 - 해당 값으로 Parameter 업데이트를 한다.
+
+
 ```python
-# loss 함수와 loss함수 값을 최소화하기 위한 optimizer를 정의한다.
 criterion = torch.nn.MSELoss() 
 optimizer = torch.optim.SGD(model.parameters(), lr=learningRate)
 
@@ -58,6 +58,7 @@ for epoch in range(epochs):
     # parameters를 업데이트한다.
     optimizer.step()
 ```
+
 # optimizer.zero_grad()를 사용하는 이유
 다음과 같이 gradient descent를 low level에서 구하는 코드를 보자. (*네이버 ai 부트코스 코드를 일부 참조)
 
@@ -83,7 +84,7 @@ torch에서 backward를 하면 이 연산이 대입연산(=)이 아니라 += 로
 
 그러면 loss.backward()에 그냥 집어넣어 패키징하면 되지, 왜 따로 optimizer.zero_grad()를 사용하게 만들었을까?
 
-RNN에서는 loss.backward() 시 gradient을 누적해 계산해야하는 경우가 있기 때문이다.
+**RNN처럼 loss.backward() 시 gradient을 누적해 계산해야할 때 문제가 되던 누적합 계산 방식이 편하기 때문이다.**
 
 아래 RNN의 BPTT를 구현하는 코드 일부를 보면, timestep마다 grad를 계산하는 for문 내 재귀를 돌 때,
 wx_grad와 ws_grad이 대입(=)이 아니라 +=를 사용하였다. 
