@@ -69,3 +69,33 @@ print(f"Label: {label}")
 ```
 ## @ 참고
 https://tutorials.pytorch.kr/beginner/basics/data_tutorial.html
+____
+dataset 클래스
+- 데이터 입력 형태를 정의하는 클래스이다.
+- 데이터를 입력하는 방식의 표준화가 필요한데, 그걸 구현하는 게 클래스
+- 데이터 형식, image, audio, text에 따라 입력이 달라진다.
+
+
+![](./../../../assets/images/2022-04-12-torch4_dataloader_images/1664270484846.png)
+__init__에서 모든 걸 다 해줘야 하나?
+이미지의 텐서 변환은..
+getItem할 때 변환한 텐션이 아니라, 학습이 필요한 시점에서 변환해줘도 됨.
+
+cpu는 변환해주고, gpus는 학습 이렇게 병렬로 처리할 수 있다.
+
+그래서 transform을 이용해 정의.
+
+데이터 셋에 대한 표준화된 처리 방법 제공 필요
+: 후속 연구자 또는 동료에게 빛과 같은 존재다
+
+HuggingFace와 같은 표준화된 라이브러리를 사용한다.
+
+![](./../../../assets/images/2022-04-12-torch4_dataloader_images/1664271531450.png)
+- sampler
+- batch_sampler
+- collate_fn
+
+ Further Question
+
+DataLoader에서 사용할 수 있는 각 sampler들을 언제 사용하면 좋을지 같이 논의해보세요!
+데이터의 크기가 너무 커서 메모리에 한번에 올릴 수가 없을 때 Dataset에서 어떻게 데이터를 불러오는게 좋을지 같이 논의해보세요!

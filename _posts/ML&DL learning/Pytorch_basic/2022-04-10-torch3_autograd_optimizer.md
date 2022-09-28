@@ -15,7 +15,8 @@ DL 모델은 수많은 레이어가 마치 레고블럭처럼 조립되는 것�
 - optimizer.zero_grad()를 안하면 어떤 일이 일어날지 그리고 매 batch step마다 항상 필요한지 논의해보자.
 
 # 레이어 구성
-하나의 레이어를 구성한다면 다음과 같이 구성할 수 있다. linear 레이어의 예시다.
+하나의 레이어를 구성한다면 다음과 같이 구성할 수 있다. linear 레이어의 예시다.     
+
 ![](./../../../assets/images/2022-04-10-torch3_autograd_optimizer_images/1664247525203.png)
 
 ## torch.nn.Module
@@ -24,12 +25,12 @@ DL 모델은 수많은 레이어가 마치 레고블럭처럼 조립되는 것�
 - backward는 autograd에 의한 자동미분이다.
 - 그리고 학습의 대상이 되는 모델의 param(tensor)에 대해 정의해야 한다. 
 
-아래 이미지에서 입력 x, y를 받아 z를 출력하는 forwardpass와 LOSS 함수 L에 대해 z, y, x를 (편)미분한 값을 구하는 backwardpass 과정이 레이어의 핵심이다.
+아래 이미지에서 입력 x, y를 받아 z를 출력하는 forward propagation과 LOSS 함수 L에 대해 z, y, x를 (편)미분한 값을 구하는 backward propagation 과정이 레이어의 핵심이다.
 
 ![](./../../../assets/images/2022-04-10-torch3_autograd_optimizer_images/1664245682742.png)
 
 ## nn.Parameter
-- Tensor 객체의 상속 객체이다.
+- Tensor 객체의 상속 객체이다. 
 - nn.Parameter가 nn.Module 내에 attribute가 되는 경우는 보통 학습을 해야하는 파라미터로 설정하는 경우이다. 따라서 nn.Parameter에서는 required_grad의 기본값을 True로 둔다. 
 - 다만 보통은 우리가 직접 이 nn.Parameter를 사용하지는 않는다. 이미 linear, convolutional layer에서 어떤 파라미터를 써야하는지 기본적으로 구성되어 있기 때문이다.
 ![](./../../../assets/images/2022-04-10-torch3_autograd_optimizer_images/1664247335660.png)
@@ -61,7 +62,7 @@ for epoch in range(epochs):
 
 # optimizer.zero_grad()를 사용하는 이유
 다음과 같이 gradient descent를 low level에서 구하는 코드를 보자. (*네이버 ai 부트코스 코드를 일부 참조)
-
+    
 ```python
 for i in range(epoch):
     _y = train_x * w + b

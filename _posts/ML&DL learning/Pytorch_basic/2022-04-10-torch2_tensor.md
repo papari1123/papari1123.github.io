@@ -202,9 +202,43 @@ w.grad
 물론 이렇게 텐서 단위로는 보통 안하고, 모델 수준에서 autograd라는 함수를 그냥 사용한다.
 왜냐면 이미 torch에서 모듈로 구현된 레이어 내부에서 requires_grad가 이미 true로 세팅되어있기 때문이다.
 
-## Reference
-https://tutorials.pytorch.kr/beginner/basics/quickstart_tutorial.html
+## 기타 조작 함수
+선형 대수를 포함해 매우 다양하고 많은 tensor 조작 함수가 있다.
+본 포스팅에 나온 내용 이외에도 눈여겨볼만한 함수들을 기록하였다.
+- gather 함수 
+https://pytorch.org/docs/stable/generated/torch.gather.html#torch.gather
+```python
+out[i][j][k] = input[index[i][j][k]][j][k]  # if dim == 0
+out[i][j][k] = input[i][index[i][j][k]][k]  # if dim == 1
+out[i][j][k] = input[i][j][index[i][j][k]]  # if dim == 2
+```
+- scatter 함수 
+https://pytorch.org/docs/stable/generated/torch.Tensor.scatter_.html#torch.Tensor.scatter_
+```python
+self[index[i][j][k]][j][k] = src[i][j][k]  # if dim == 0
+self[i][index[i][j][k]][k] = src[i][j][k]  # if dim == 1
+self[i][j][index[i][j][k]] = src[i][j][k]  # if dim == 2
+```
 
+- expand 함수
+https://pytorch.org/docs/stable/generated/torch.Tensor.expand.html?highlight=expand
+
+- check 함수
+https://pytorch.org/docs/stable/generated/torch.chunk.html#torch.chunk
+
+- swapdims 함수
+https://pytorch.org/docs/stable/generated/torch.swapdims.html#torch.swapdims
+
+- 랜덤 샘플링 함수
+https://pytorch.org/docs/stable/torch.html#random-sampling
+
+- einsum 함수
+https://pytorch.org/docs/stable/generated/torch.einsum.html#torch.einsum
+
+
+## Reference
+- https://tutorials.pytorch.kr/beginner/basics/quickstart_tutorial.html
+- 네이버 AI 부스트캠프
 
 
 
