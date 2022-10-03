@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 경사 하강법
+title: (1) 경사 하강법
 tags: [gradient_descent, norm, gradient]
 categories: ml_basic
 ---
@@ -83,9 +83,8 @@ y는 n차원 벡터, X는 nxm 행렬, β는 mx1 벡터라고 하자.
 y는 X에 대한 다변수 함수로 볼 수 있으므로 다변수 함수에 대한 경사하강법을 적용한다.
 따라서 그래디언트 계산식을 먼저 구해야 한다.
 
-수식이 상당히 복잡하여 직접 
-중간에 빨간색으로 표시한 1/n term은 변수 개수에 대에 평균을 내기 위해 쓰였고,
-실제 norm 정의에는 포함되지 않는다.
+수식이 상당히 복잡한 편이다. 
+중간에 빨간색으로 표시한 1/n term은 변수 개수에 대에 평균을 내기 위해 쓰였다.
 
 ![](./../../../assets/images/2022-09-19-Gradient_descent_images/1663653765589.png)    
 ![](./../../../assets/images/2022-09-19-Gradient_descent_images/1663653798722.png)    
@@ -126,7 +125,7 @@ for t in range(N):
 관련된 강의를 참고한다. [link](https://www.youtube.com/watch?v=UmathvAKj80&ab_channel=VisuallyExplained)
  
 # Discussion
-- 경사하강법을 지금은 거의 사용하지는 않지만, 다른 optimizer가 경사하강법을 기반으로
+- 경사하강법을 지금은 거의 사용하지는 않지만, 다른 optimizer이 경사하강법을 base로 하여
 진화한 방법이기 때문에 경사하강법을 제대로 이해하는 것이 중요하다.
 - 확률적 경사하강법이 convex하지 않은 함수에서 수렴 문제와 메모리 부족 문제를 어떻게 해결하는지 개념을 확실히 알 필요가 있을 거 같다.
 

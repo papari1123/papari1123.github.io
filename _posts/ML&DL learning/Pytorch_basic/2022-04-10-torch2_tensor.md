@@ -236,7 +236,7 @@ https://pytorch.org/docs/stable/torch.html#random-sampling
 https://pytorch.org/docs/stable/generated/torch.einsum.html#torch.einsum
 
 
-## Reference
+# Reference
 - https://tutorials.pytorch.kr/beginner/basics/quickstart_tutorial.html
 - 네이버 AI 부스트캠프
 

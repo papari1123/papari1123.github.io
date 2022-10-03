@@ -27,5 +27,5 @@ ds = datasets.FashionMNIST(
 ## TOTensor()
 ToTensor는 PIL Image나 Numpy ndarray 등 Tensor가 아닌 객체를 FloatTensor로 변환하고 값을 [0,1] 범위로 normalization한다.
 
-## @ 참고
+# Reference
 https://tutorials.pytorch.kr/beginner/basics/transforms_tutorial.html
