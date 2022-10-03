@@ -226,6 +226,7 @@ nn.module을 이용해 만든 인스턴스(모델 인스턴스)에 named_module�
 - model.named_modules() : 자신에게 속하는 모든 submodule을 재귀적으로 표시한다
 
 # get_submodule
+하위 모듈들을 얻는 메소드인데, 아래 공식문서를 참고하자.   
 https://pytorch.org/docs/stable/generated/torch.nn.Module.html?highlight=get_submodule#torch.nn.Module.get_submodule
 
 
