@@ -229,6 +229,13 @@ nn.module을 이용해 만든 인스턴스(모델 인스턴스)에 named_module�
 하위 모듈들을 얻는 메소드인데, 아래 공식문서를 참고하자.   
 https://pytorch.org/docs/stable/generated/torch.nn.Module.html?highlight=get_submodule#torch.nn.Module.get_submodule
 
+# train(), eval()
+nn.module의 메소드로 모델을 각각 train 모드와 evaluation 모드로 전환해주는 데 사용된다.
+**실제로 train, eval을 수행하는 것이 아니며**, train할 때와 evalution 수행 시 다르게 처리되어야 하는
+몇몇 레이어에 영향을 준다. 예를 들어 nndropout은 evaluation 시 deactivate해야 하므로 eval()을 실행하면 동작되지 않는다.
+
+![](./../../../assets/images/2022-04-15-torch6_model_images/1664862377465.png)
+![](./../../../assets/images/2022-04-15-torch6_model_images/1664862386859.png)
 
 # Reference
 - 네이버 AI 부트캠프
