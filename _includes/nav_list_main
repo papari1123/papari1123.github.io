@@ -19,6 +19,13 @@
         <span class="nav__sub-title">ML/DL Research</span>
             <ul>
                 {% for category in site.categories %}
+                    {% if category[0] == "nlp" %}
+                        <li><a href="/categories/nlp" class="">NLP({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
                     {% if category[0] == "ml_basic" %}
                         <li><a href="/categories/ml_basic" class="">Basic({{category[1].size}})</a></li>
                     {% endif %}
@@ -46,6 +53,13 @@
                 {% endfor %}
             </ul>
         <span class="nav__sub-title">ML/DL Engineering</span>
+             <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "nlp_engineering" %}
+                        <li><a href="/categories/nlp_engineering" class="">NLP({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "pytorch" %}
