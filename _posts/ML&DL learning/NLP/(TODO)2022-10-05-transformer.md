@@ -4,6 +4,12 @@ title: NLP 기초
 tags: [NLP]
 categories: nlp
 ---
+# Introduction
+
+# Pre-question
+
+# Attention
+
 
 # Discussion
 

@@ -10,6 +10,8 @@ categories: ml_basic
 # Pre-question
 - 시퀀셜 모델이 겪는 주요 문제는?
 
+
+
 어떤 시퀀스가 있다고 할 때,
 문장은 항상 길이가 달라질 수 있다.
 
@@ -160,62 +162,25 @@ decoder 쪽은 실제로 생성한다.
 - 네이버 AI 부트캠프 (* 강의 자료 바탕으로 재구성)   
 
 
-saturating performance 의 경향도 나타지 않음.
-: 네트워크 규모가 커진다고 해도 성능이 더 높아지지 않는 것.
-
-VIT 장단점.
-
-![](./../../../assets/images/(TODO)2022-10-05-Transformer_images/1665130030157.png)
+![](./../../../assets/images/(TODO)2022-10-05-Transformer_images/1665971374670.png)
 
 
-![](./../../../assets/images/(TODO)2022-10-05-Transformer_images/1665130161730.png)
+- Scaled dot attention > Q K dimension 이 커지게 되면, 
+softmax 함수의 특성 상 Qkt의 분산이 커지게 된다.
+gradient 값이 작아지게 된다.
 
-inductive bias
-![](./../../../assets/images/(TODO)2022-10-05-Transformer_images/1665130211599.png)
-
-
-
-![](./../../../assets/images/(TODO)2022-10-05-Transformer_images/1665130359345.png)
-![](./../../../assets/images/(TODO)2022-10-05-Transformer_images/1665130459053.png)
-
-1. 이미지를 patch로 단위화
-2. linear projection of flattened patches
-3. class token 추가, positional embedding
-4. Transformer encoder 통과
-5. MLP  Head 통과
-6. Class 분류
-![](./../../../assets/images/(TODO)2022-10-05-Transformer_images/1665130667638.png)
-
-![](./../../../assets/images/(TODO)2022-10-05-Transformer_images/1665130836730.png)
-
-____
-VA는 GENERATION 모델이라 DECODER를 학습시키는데 초점
-
-![](./../../../assets/images/(TODO)2022-10-05-Transformer_images/1665131494243.png)
+- 
+![](./../../../assets/images/(TODO)2022-10-05-Transformer_images/1665973225431.png)
 
 
-똑같이 말고 유사하게 만들어 달라..
+__8강__
 
-Regularization : 이상젖ㄱ인 샘플링 펑션을 만들 때, 우리가 원하는 펑션에 최대한 가깝게 만들어졌나
-Recondstruction : 얼마나 이상적인 샘플링이 되나. 얼마나 데이터를 잘 복원했는가.
-ELBO : Evidence Lower Bound - 
+Transformer
+- MHA가 필요한 이유는?
+어떤 동일한 시퀀스가 주어져도 특정한 쿼리 워드에서 다양한 측면에 대해 정보를 추출해야 함.
 
+- I라는 쿼리 워드에 인코딩을 수행하려면 -> 각 주체가 하는 정보를 뽑아올 수 있다.
 
+learning rate scheduling
 
-![](./../../../assets/images/(TODO)2022-10-05-Transformer_images/1665131763250.png)
-
-
-![](./../../../assets/images/(TODO)2022-10-05-Transformer_images/1665131832508.png)
-
-z는 추측 샘플, p(z) prior distribution : 진짜 
-
-![](./../../../assets/images/(TODO)2022-10-05-Transformer_images/1665131912699.png)
-
-![](./../../../assets/images/(TODO)2022-10-05-Transformer_images/1665132254190.png)
-
-![](./../../../assets/images/(TODO)2022-10-05-Transformer_images/1665132592339.png)
-
-코드 연산 확인하는 거
-https://nn.labml.ai/transformers/index.html
-
-
+![](./../../../assets/images/(TODO)2022-10-05-Transformer_images/1665982084326.png)

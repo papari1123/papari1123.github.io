@@ -42,8 +42,6 @@ CNN 기반으로 만들어진 오픈소스이다. 전처리는 전체 프로세�
 # Py-Hanspell
 - 맞춤법 교정
 
-# 정규 표현식 (re)
-
 
 # Discussion
 

@@ -39,24 +39,6 @@ script_dir=$(dirname $0)
 echo $script_dir
 
 
-root@test:/tmp# sh aa/test.sh 
-aa
-root@test:/tmp# bash aa/test.sh 
-aa
-
-
-root@test:/tmp# cd aa/bb
-root@test:/tmp/aa/bb# sh ../test.sh 
-..
-root@test:/tmp/aa/bb# bash ../test.sh 
-..
-
-
-root@test:/tmp/aa/bb# sh /tmp/aa/test.sh 
-/tmp/aa
-root@test:/tmp/aa/bb# bash /tmp/aa/test.sh 
-/tmp/aa
-
 ```
 사용 예시
 ```commandline
@@ -77,8 +59,6 @@ python -m torch.distributed.launch --nnodes=$NNODES --node_rank=$NODE_RANK --mas
 ```
 
 ## @ 참고
-chrome-extension://hmigninkgibhdckiaphhmbgcghochdjc/pdfjs/web/viewer.html?file=https%3A%2F%2Fcs.kangwon.ac.kr%2F~leeck%2FIR%2Fbash.pdf
-
-[zetawiki](https://zetawiki.com/wiki/Bash_%EC%89%98%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8_%EC%83%81%EB%8C%80%EA%B2%BD%EB%A1%9C_%EC%96%BB%EA%B8%B0)   
-[Shell script tutorial](https://www.shellscript.sh/quickref.html)   
-[colon을 이용한 참조](https://tldp.org/LDP/abs/html/parameter-substitution.html#EXPREPL1)   
+[zetawiki](https://zetawiki.com/wiki/Bash_%EC%89%98%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8_%EC%83%81%EB%8C%80%EA%B2%BD%EB%A1%9C_%EC%96%BB%EA%B8%B0)         
+[Shell script tutorial](https://www.shellscript.sh/quickref.html)       
+[colon을 이용한 참조](https://tldp.org/LDP/abs/html/parameter-substitution.html#EXPREPL1)         

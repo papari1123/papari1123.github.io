@@ -11,7 +11,7 @@ categories: pytorch
 # Pre-question
 - 파이토치에서 view, reshape, squeeze, unsqueeze는 어떤 용도로 쓰일까?
 
-## 텐서
+# 텐서의 의미
 Pytorch에서는 텐서를 사용해서 모델의 입력과 출력 및 매개변수들을 encoding한다.  
 Numpy의 ndarray와 유사하며, Automatic differentiation ([Autograd](https://tutorials.pytorch.kr/beginner/basics/autogradqs_tutorial.html)) 에
  최적화 되어있다.
@@ -22,6 +22,7 @@ import numpy as np
 ```
 또한 Pytorch에서 텐서를 다루는 것은 numpy 구현 문법과 매우 비슷하나 일부 다른 부분이 있다. 이는 뒤에서 설명한다.
 
+# 텐서의 사용
   
 ## 텐서 초기화
 - 데이터로 부터 직접 생성   
@@ -74,7 +75,7 @@ print(f"Shape : {tensor.shape}, DataType : {tensor.dtype}, Device : {tensor.devi
 ```
    
    
-## 텐서 연산
+# 텐서 연산
 pytorch는 여러 텐서 연산을 지원한다. [링크](https://pytorch.org/docs/stable/torch.html)   
 
 ## to 연산 : 연산 장치 할당
@@ -178,8 +179,15 @@ print(f"t:{t}, n:{n}")
 t = t.add(1)
 print(f"t:{t}, n:{n}")
 ```
+# 탠서 조작 시 주의할 사항
+## contiguous
+모델 입력 차원을 맞추기 위해 텐서의 차원을 조작하다보면, 텐서 성분의 기존 메모리 저장 순서와
+처리되는 텐서 구조가 좀 달라지는 경우가 있다.    
+자세한 것은 아래를 참조. 이를 주의하여 view, reshape, transpose들을 사용하여야 한다. 
+[contiguous 원리와 의미] (https://jimmy-ai.tistory.com/m/122)
 
-## nn.functional 모듈
+
+# nn.functional 모듈
 딥러닝에서 유용하게 쓸 수 있는 다양한 함수를 지원한다. 
 ```python
 import torch
@@ -202,7 +210,7 @@ w.grad
 물론 이렇게 텐서 단위로는 보통 안하고, 모델 수준에서 autograd라는 함수를 그냥 사용한다.
 왜냐면 이미 torch에서 모듈로 구현된 레이어 내부에서 requires_grad가 이미 true로 세팅되어있기 때문이다.
 
-## 기타 조작 함수
+# 기타 조작 함수
 선형 대수를 포함해 매우 다양하고 많은 tensor 조작 함수가 있다.
 본 포스팅에 나온 내용 이외에도 눈여겨볼만한 함수들을 기록하였다.
 - gather 함수 
