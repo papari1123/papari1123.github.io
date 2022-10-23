@@ -45,7 +45,7 @@ ReLU:
 ![](./../../../assets/images/2022-09-19-Learning_basic_images/1663734002452.png)    
 
 ReLU는 **x가 0 이상일 때 gradient가 1이라 vanishing gradient 문제가 발생하지 않는다.**
-또한 **컴퓨터가 gradient를 계산하기 쉬운 장점**이 있다. 다만 x = (음수)일 경우는 출력값이 0이기 때문에, 학습이 안되는 문제가 있으며 이를 보완하기 위해 leakyReLU등이 사용된다.
+또한 **컴퓨터가 gradient를 계산하기 쉬운 장점**이 있다. 다만 x = (음수)일 경우는 출력값이 0이기 때문에, 학습이 안되는 문제가 있으며 이를 보완하기 위해 leakyReLU, GELU 등이 사용된다.
 
 ![](./../../../assets/images/2022-09-19-Learning_basic_images/1663733943912.png)
 
@@ -94,7 +94,7 @@ chain-rule을 이용해 최종 출력층부터 입력층까지 역순으로 계�
 ![](./../../../assets/images/2022-09-19-Learning_basic_images/1663733555234.png)
 
 # 계산그래프를 이용한 역전파
-chain-rule을 이용한 계산그래프를 통해 레이어를 여러층 쌓아도 역전파를 계산할 수 있다
+chain-rule을 이용한 계산그래프를 통해 레이어를 여러층 쌓아도 역전파를 계산할 수 있다.
 아래 예시로 보듯이, 주어진 weight에 더해진 값은 역전파 시 제거되고, weight에 곱해진 항만 남게된다.     
 ![](./../../../assets/images/2022-09-19-Learning_basic_images/1665627820028.png)
 
