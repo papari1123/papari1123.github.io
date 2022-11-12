@@ -42,6 +42,19 @@ pd.DataFrame.from_dict(data)
 
 ```
 
+# 필터링
+판다스는 간단하게 데이터를 필터링할 수 있다.
+## 문자열 일치
+```python
+filter = df['grade'] == 'good' # grade가 good인 index만을 추출한다.
+filter = df['grade'].str.contains('good') # grade에 good이 포함된 index만을 추출한다.
+
+good_df = df[filter] 
+not_good_df = df[~filter] # 
+
+```
+
+
 
 ## @참고
 [pandas 공식 가이드](https://pandas.pydata.org/docs/user_guide/10min.html)

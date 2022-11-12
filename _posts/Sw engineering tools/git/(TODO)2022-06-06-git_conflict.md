@@ -1,4 +1,3 @@
----
 layout: single
 title: git tutorial(2) (conflict)
 tags: [git, push, pull, merge]
@@ -7,7 +6,6 @@ work: 0
 ---
 # Introduction
 
-![](assets/49694e09.png)
 
 # Discussion
 

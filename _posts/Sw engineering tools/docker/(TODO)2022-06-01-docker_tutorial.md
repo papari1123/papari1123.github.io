@@ -78,6 +78,7 @@ docker exec -it ubuntu20 /bin/bash
 docker exec -it {container_id or name} /bin/sh
 또는
 docker attach {cntainer}
+
 # attach와 exec 차이 정리
 attach 명령어
 attach 명령어로 컨테이너에 진입할 시 도커로 주피터노트북을 백그라운드로 실행한 것이 포그라운드로 로그가 나오게 된다. 이럴 경우 터미널을 닫을 경우 주피터노트북 실행을 닫히게 되어 다시 도커로 주피터 노트북을 켜주어야 한다. (일반적으로 도커로 주피터을 실행할 시 포그라운드가 아닌 백그라운드로 시켜주는 이유도 이런 번거로움을 면하기 위해서이다.) 따라서, 백그라운드로 실행시킨 의미가 없어진다. 만약 도커의 로그가 보고 싶었던 것이라면 차라리 도커의 로그를 확인하는 명령어 logs를 활용하는 것이 현명하다.
@@ -102,9 +103,14 @@ Bash를 사용하려면 이 옵션을 설정해야 합니다.
 -d, --detach
 Detached 모드입니다.
 보통 데몬 모드라고 부르며, 컨테이너가 백그라운드로 실행됩니다.
+이를 설정하지 않으면, 셀 위에서 컨테이너가 실행된다. 컨테이너 로그를 바로 볼 수 있으나,
+컨테이너를 나가면 실행 종료.
+
 -p, --publish
 호스트와 컨테이너의 포트를 연결합니다. (포트포워딩)
 <호스트 포트>:<컨테이너 포트>
+포트 지정
+
 -p 80:80
 --privileged
 컨테이너 안에서 호스트의 리눅스 커널 기능(Capability)을 모두 사용합니다.
@@ -158,6 +164,27 @@ SELinux, AppArmor 옵션을 설정합니다.
 ![](./../../../assets/images/(TODO)2022-06-01-docker_tutorial_images/1657002173444.png)
 
 ![](./../../../assets/images/(TODO)2022-06-01-docker_tutorial_images/1657002775441.png)
+
+# docker 실행 - my sql 실행하기
+- docker pull "이미지 이름 :태그"
+```commandline
+# mysql 8 버전의 이미지를 다운
+docker pull mysql:8 
+docer images
+```
+- docker run "이미지 이름:태그"
+- 다운받은 MYSQL 이미지 기반으로 Docker container 만들고 실행
+
+- docker ps 명령어로 실행한 컨테이너 확인 가능
+- 
+
+(출처 : 네이버 부캠)
+![](./../../../assets/images/(TODO)2022-06-01-docker_tutorial_images/1668145542337.png)
+
+
+![](./../../../assets/images/(TODO)2022-06-01-docker_tutorial_images/1668145621543.png)
+
+![](./../../../assets/images/(TODO)2022-06-01-docker_tutorial_images/1668145703048.png)
 
 # Discussion
 
