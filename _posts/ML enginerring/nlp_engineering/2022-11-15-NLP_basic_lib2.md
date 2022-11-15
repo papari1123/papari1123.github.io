@@ -14,6 +14,7 @@ categories: nlp_engineering
 
 # 1. 맞춤법 정리
 - hanspell을 사용해 맞춤법이 틀린 문장들을 교정한다.
+
 ```python
 !pip install git+https://github.com/ssut/py-hanspell.git
 
@@ -41,6 +42,7 @@ print(checked_sent)
 
 # 4. 중구난방으로 표현된 수식 등 통일
 - 수식을 표현하는 방법이 다양한데, 그대로 두면 같은 의미를 가진 수식도 다른 토큰으로 치환될 수 있다.
+
 ```python
 punct_mapping = {"‘": "'", "₹": "e", "´": "'", "°": "", "€": "e", "™": "tm", "√": " sqrt ", "×": "x", "²": "2", "—": "-", "–": "-", "’": "'", "_": "-", "`": "'", '“': '"', '”': '"', '“': '"', "£": "e", '∞': 'infinity', 'θ': 'theta', '÷': '/', 'α': 'alpha', '•': '.', 'à': 'a', '−': '-', 'β': 'beta', '∅': '', '³': '3', 'π': 'pi', }
 for p in punct_mapping:
@@ -49,12 +51,15 @@ for p in punct_mapping:
 
 # 5. 중복 제거
 - 중복으로 쓰인 띄어쓰기를 제거한다.
+
 ```python
 text = "하늘이    매우  맑다."
 text = re.sub(r"\s+", " ", text).strip()
 >>> 하늘이 매우 맑다.
 ```
+
 - 문장도 제거할 수 있음.
+- 
 ```python
 from collections import OrderedDict
 texts = list(OrderedDict.fromkeys(texts))
@@ -63,6 +68,7 @@ texts = list(OrderedDict.fromkeys(texts))
 ## 6. 띄어쓰기 보정
 - pykospacing은 띄어쓰기가 잘못된 문장을 보정한다.
 - 띄어쓰기가 잘못 추가된 걸 보정하지는 못하는 듯하다.
+
 ```python
 !pip install git+https://github.com/haven-jeon/PyKoSpacing.git
 
@@ -79,6 +85,7 @@ print(text)
 ## 7. 품사에 따른 문장 필터링
 - koNLpy를 이용해 문장 내 품사를 분석하고, 명사(NN), 동사(V), 형용사(J) 포함 여부에 따라 문장을 필터링 할 수 있다.
 - 특히 mecab 토크나이저는 다른 토크나이저와 비교할 때, 처리속도 뿐 아니라 다양한 품사를 다루기 때문에 주로 사용된다.
+
 ```python
 !bash <(curl -s https://raw.githubusercontent.com/konlpy/konlpy/master/scripts/mecab.sh)
 
