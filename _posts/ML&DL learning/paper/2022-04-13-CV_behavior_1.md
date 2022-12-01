@@ -46,7 +46,7 @@ behavior recognition, Livestock, EffecientNet, BiFPN, LSTM
 
 
 ## methods
-### data description (input, output)    
+### data description (input, output)     
 1009x 90sec(average)의 video clips으로 구성되며, fps는 25임.
 ![image](https://user-images.githubusercontent.com/33012030/163295371-0ec238b1-b292-4992-b7ce-93bbc360b630.png)
 input은 16 frame의 video clips이며 1 frame은 512 x 512의 RGB 영상.    

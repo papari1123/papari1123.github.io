@@ -159,6 +159,29 @@ SELinux, AppArmor 옵션을 설정합니다.
 
 ![](./../../../assets/images/(TODO)2022-06-01-docker_tutorial_images/1657002775441.png)
 
+
+# docker 실행 - my sql 실행하기
+- docker pull "이미지 이름 :태그"
+```commandline
+# mysql 8 버전의 이미지를 다운
+docker pull mysql:8 
+docer images
+```
+- docker run "이미지 이름:태그"
+- 다운받은 MYSQL 이미지 기반으로 Docker container 만들고 실행
+
+- docker ps 명령어로 실행한 컨테이너 확인 가능
+- 
+
+(출처 : 네이버 부캠)
+![](./../../../assets/images/(TODO)2022-06-01-docker_tutorial_images/1668145542337.png)
+
+
+![](./../../../assets/images/(TODO)2022-06-01-docker_tutorial_images/1668145621543.png)
+
+![](./../../../assets/images/(TODO)2022-06-01-docker_tutorial_images/1668145703048.png)
+
+
 # Discussion
 
 

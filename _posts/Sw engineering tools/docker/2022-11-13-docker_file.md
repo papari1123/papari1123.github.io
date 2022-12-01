@@ -67,5 +67,5 @@ docker build , -t my-appp
 - 이후 docker run {이미지 이름:태그}로 방금 만든 이미지를 실행가능.
 
 # Reference
-- 네이버 AI 부스트캠프
+- 네이버 AI 부스트캠프 (강의 내용을 바탕으로 재구성)
 - [difference-between-run-and-cmd-in-a-dockerfile](https://stackoverflow.com/questions/37461868/difference-between-run-and-cmd-in-a-dockerfile)
